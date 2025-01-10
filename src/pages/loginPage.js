@@ -47,8 +47,18 @@ const LoginPage = () => {
     <LoginStyleContainer>
       <LoginFormStyle onSubmit={onLogin}>
         <h1>Welcome, Login</h1>
-        <Input name={"username"} label={"Username"} placeholder={"username"} />
-        <Input name={"password"} label={"Password"} placeholder={"password"} />
+        <Input
+          name={"username"}
+          label={"Username"}
+          placeholder={"username"}
+          value={"emilys"}
+        />
+        <Input
+          name={"password"}
+          label={"Password"}
+          placeholder={"password"}
+          value={"emilyspass"}
+        />
         <Button label={"Login"} />
       </LoginFormStyle>
       {error && (
