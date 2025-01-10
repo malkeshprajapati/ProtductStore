@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "eslint": "^8.57.1",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -29,7 +30,14 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+    "no-console": "off", 
+    "no-unused-vars": "off", 
+    "react/prop-types": "off", 
+    "react/jsx-uses-react": "off",
+    "react/jsx-uses-vars": "off"
+  }
   },
   "browserslist": {
     "production": [
