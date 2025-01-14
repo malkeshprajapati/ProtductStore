@@ -9,7 +9,7 @@ const Sidebar = ({ sidebarShow, closeSidebar }) => {
       <IoCloseSharp className="close-menu" onClick={() => closeSidebar()} />
       <SideBarChildren>
         <li>
-          <Link to={"profile"}>My Profile</Link>
+          <Link to={"profile"}>My rofile</Link>
         </li>
         <li>
           <Link to={"/"}>Products</Link>
