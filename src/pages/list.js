@@ -17,7 +17,7 @@ import _ from "lodash";
 import { setLimit, setProducts } from "../features/productSlice";
 
 const List = () => {
-  const [loading, setLading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const { scrollRef } = useSelector((state) => state.layout);
   const { products, limit, search } = useSelector((state) => state.products);
   const apiRequest = useApiRequest();
@@ -29,10 +29,10 @@ const List = () => {
   };
 
   const apiCall = async () => {
-    setLading(true);
+    setLoading(true);
     const data = await apiRequest(`products?limit=${limit}`);
     dispatch(setProducts(data?.products));
-    setLading(false);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -51,6 +51,7 @@ const List = () => {
         !loading &&
         !search
       ) {
+        console.log("scrolled");
         dispatch(setLimit());
       }
     }, 500);
